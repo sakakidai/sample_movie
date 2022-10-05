@@ -13,6 +13,7 @@
     <strong>サムネイル：</strong>
     <% if movie.thumbnail.attached? %>
       <%= image_tag movie.thumbnail %>
+      <%= image_tag movie.thumbnail.variant(resize_to_limit: [100, 100]) %>
     <% end %>
   </p>
 
